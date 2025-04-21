@@ -1,0 +1,401 @@
+/* ==================== Channels Hook ==================== */
+.channelsHook{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    }
+    
+    
+    /* ==================== WhatsApp Channel Button ==================== */
+    
+    .wbutton {
+      cursor: pointer;
+      border: none;
+      background: #25d366;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-content: center;
+      transition:
+        background 300ms,
+        transform 200ms;
+      font-weight: 600;
+      margin: auto;
+    }
+    
+    .wbutton__text {
+      position: absolute;
+      inset: 0;
+      animation: text-rotation 8s linear infinite;
+    
+      > span {
+        position: absolute;
+        transform: rotate(calc(19deg * var(--index)));
+        inset: 7px;
+      }
+    }
+    
+    .wbutton__circle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      background: #fff;
+      color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .button__icon--copy {
+      position: absolute;
+      transform: translate(-150%, 150%);
+    }
+    
+    .wbutton:hover {
+      background: #000;
+      transform: scale(1.05);
+    }
+    
+    .wbutton:hover .button__icon {
+      color: #000;
+    }
+    
+    .wbutton:hover .button__icon:first-child {
+      transition: transform 0.3s ease-in-out;
+      transform: translate(150%, -150%);
+    }
+    
+    .wbutton__circle{
+      background: #25d366;
+      color: #fff;
+    
+    }
+    
+    .wbutton:hover .button__icon--copy {
+      transition: transform 0.3s ease-in-out 0.1s;
+      transform: translate(0);
+    }
+    
+    @keyframes text-rotation {
+      to {
+        rotate: 360deg;
+      }
+    } 
+    
+    /* ==================== Telegram Channel Button ==================== */
+    
+    
+    .tbutton {
+      cursor: pointer;
+      border: none;
+      background: #0088cc;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-content: center;
+      transition:
+      background 300ms,
+      transform 200ms;
+      font-weight: 600;
+      margin: auto;
+    }
+    
+    .tbutton__text {
+      position: absolute;
+      inset: 0;
+      animation: text-rotation 8s linear infinite;
+      
+      > span {
+        position: absolute;
+        transform: rotate(calc(19deg * var(--index)));
+        inset: 7px;
+      }
+    }
+    
+    .tbutton__circle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      background: #fff;
+      color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .button__icon--copy {
+      position: absolute;
+      transform: translate(-150%, 150%);
+    }
+    
+    .tbutton:hover {
+      background: #000;
+      transform: scale(1.05);
+    }
+    
+    .tbutton:hover .button__icon {
+      color: #000;
+    }
+    
+    .tbutton:hover .button__icon:first-child {
+      transition: transform 0.3s ease-in-out;
+      transform: translate(150%, -150%);
+    }
+    
+    .tbutton__circle{
+      background: #0088cc;
+      color: #fff;
+      
+    }
+    
+    .tbutton:hover .button__icon--copy {
+      transition: transform 0.3s ease-in-out 0.1s;
+      transform: translate(0);
+    }
+    
+    @keyframes text-rotation {
+      to {
+        rotate: 360deg;
+      }
+    } 
+    
+    
+    .customColor{
+      margin-top: 5px;
+      padding: 10px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(34deg, #f7bc44, #fbdfa5 100%);
+    
+    }
+    
+    /* ========== Secondary Overlay Model  ============ */
+    
+    /* Modal Overlay */
+    .custom-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    /* Modal Content */
+    .custom-modal-content {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #000;
+    }
+    
+    /* Timer */
+    .custom-timer-container {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 18px;
+      background: #222;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    
+    /* Skip Ad Button */
+    #skipBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Ad Area (Optional) */
+    .custom-area {
+      margin-top: 40px;
+    }
+    
+    
+    
+    /* ========== Secondary Overlay Model  ============ */
+    
+    
+    /* Overlay and Modal Base Styles */
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.623);
+      z-index: 10000;
+      overflow: auto;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      display: flex;
+    }
+    
+    .modal {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      z-index: 11000;
+      overflow: auto;
+      padding: 20px;
+    }
+    
+    
+    .overlay-content {
+      background: rgba(0, 0, 0, 0.856);
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+      top: 5rem;
+      margin: auto;
+    }
+    
+    .modal-content {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      padding: 10%;
+      position: relative;
+      top: 15%;
+    }
+    
+    
+    
+    /* Ad Support Overlay Styles */
+    .overlay-content h1 {
+      color: yellow;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .ad-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 20px 0;
+      border-radius: 5px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    
+    .ad-button:hover {
+      background-color: darkred;
+    }
+    
+    .instructions {
+      text-align: left;
+      margin: 20px 0;
+    }
+    
+    .instructions h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    
+    .instructions p {
+      margin: 10px 0;
+      color: #f0f0f0;
+    }
+    
+    .footer-note {
+      color: limegreen;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+    
+    /* Retry Modal Styles */
+    .modal-content h1 {
+      color: red;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    
+    .overlymessage {
+      color: yellow;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+    
+    .loader {
+      width: 40px;
+      height: 40px;
+      margin: 20px auto;
+      border: 5px solid #999;
+      border-top: 5px solid red;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+    
+      100% {
+          transform: rotate(360deg);
+      }
+    }
+    
+    .reopen-btn,
+    .reload {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 10px 0;
+      border-radius: 5px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    
+    .reload {
+      background-color: #555;
+    }
+    
+    .reopen-btn:hover,
+    .reload:hover {
+      background-color: darkred;
+    }
+    
+    
+    
